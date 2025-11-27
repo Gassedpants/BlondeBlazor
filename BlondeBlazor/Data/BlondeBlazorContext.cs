@@ -1,20 +1,12 @@
 ﻿using BlondeBlazor.Configurations.Entities;
-using BlondeBlazor.Domain;
+using BlondeBlazor.Data;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BlondeBlazor.Data
 {
-    public class BlondeBlazorContext : DbContext
+    public class BlondeBlazorContext(DbContextOptions<BlondeBlazorContext> options) : IdentityDbContext<BlondeBlazorUser>(options)
     {
-        public BlondeBlazorContext (DbContextOptions<BlondeBlazorContext> options)
-            : base(options)
-        {
-        }
-
         public DbSet<BlondeBlazor.Domain.Make> Make { get; set; } = default!;
         public DbSet<BlondeBlazor.Domain.Booking> Booking { get; set; } = default!;
         public DbSet<BlondeBlazor.Domain.Colour> Colour { get; set; } = default!;
