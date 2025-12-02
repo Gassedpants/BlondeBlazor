@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BlodeBlazor.Configurations.Entities
+namespace BlondeBlazor.Configurations.Entities
 {
     public class RoleSeed : IEntityTypeConfiguration<IdentityRole>
     {
