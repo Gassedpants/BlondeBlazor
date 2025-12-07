@@ -15,7 +15,7 @@ namespace BlondeBlazor.Migrations
                 name: "Booking",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DateOut = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateIn = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -28,14 +28,14 @@ namespace BlondeBlazor.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Booking", x => x.ID);
+                    table.PrimaryKey("PK_Booking", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Colour",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -45,14 +45,14 @@ namespace BlondeBlazor.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Colour", x => x.ID);
+                    table.PrimaryKey("PK_Colour", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Customer",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DrivingLicense = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -65,14 +65,14 @@ namespace BlondeBlazor.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Customer", x => x.ID);
+                    table.PrimaryKey("PK_Customer", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Make",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -82,14 +82,14 @@ namespace BlondeBlazor.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Make", x => x.ID);
+                    table.PrimaryKey("PK_Make", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Model",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -99,14 +99,14 @@ namespace BlondeBlazor.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Model", x => x.ID);
+                    table.PrimaryKey("PK_Model", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Vehicle",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Year = table.Column<int>(type: "int", nullable: false),
                     LicensePlateNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -120,7 +120,7 @@ namespace BlondeBlazor.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vehicle", x => x.ID);
+                    table.PrimaryKey("PK_Vehicle", x => x.Id);
                 });
         }
 

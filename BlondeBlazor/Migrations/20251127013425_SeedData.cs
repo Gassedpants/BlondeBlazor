@@ -15,7 +15,7 @@ namespace BlondeBlazor.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Colour",
-                columns: new[] { "ID", "CreatedBy", "DateCreated", "DateUpdated", "Name", "UpdatedBy" },
+                columns: new[] { "Id", "CreatedBy", "DateCreated", "DateUpdated", "Name", "UpdatedBy" },
                 values: new object[,]
                 {
                     { 1, "System", new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5690), new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5703), "Black", "System" },
@@ -24,7 +24,7 @@ namespace BlondeBlazor.Migrations
 
             migrationBuilder.InsertData(
                 table: "Make",
-                columns: new[] { "ID", "CreatedBy", "DateCreated", "DateUpdated", "Name", "UpdatedBy" },
+                columns: new[] { "Id", "CreatedBy", "DateCreated", "DateUpdated", "Name", "UpdatedBy" },
                 values: new object[,]
                 {
                     { 1, "System", new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5944), new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5944), "BMW", "System" },
@@ -33,7 +33,7 @@ namespace BlondeBlazor.Migrations
 
             migrationBuilder.InsertData(
                 table: "Model",
-                columns: new[] { "ID", "CreatedBy", "DateCreated", "DateUpdated", "Name", "UpdatedBy" },
+                columns: new[] { "Id", "CreatedBy", "DateCreated", "DateUpdated", "Name", "UpdatedBy" },
                 values: new object[,]
                 {
                     { 1, "System", new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6031), new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6032), "i4", "System" },
@@ -48,42 +48,42 @@ namespace BlondeBlazor.Migrations
         {
             migrationBuilder.DeleteData(
                 table: "Colour",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
                 table: "Colour",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
                 table: "Make",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
                 table: "Make",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
                 table: "Model",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
                 table: "Model",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
                 table: "Model",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 3);
 
             migrationBuilder.DeleteData(
                 table: "Model",
-                keyColumn: "ID",
+                keyColumn: "Id",
                 keyValue: 4);
         }
     }

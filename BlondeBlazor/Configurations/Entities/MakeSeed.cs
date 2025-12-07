@@ -12,7 +12,7 @@ namespace BlondeBlazor.Configurations.Entities
             builder.HasData(
             new Make
             {
-                ID = 1,
+                Id = 1,
                 Name = "BMW",
                 DateCreated = DateTime.Now,
                 DateUpdated = DateTime.Now,
@@ -21,7 +21,7 @@ namespace BlondeBlazor.Configurations.Entities
             },
             new Make
             {
-                ID = 2,
+                Id = 2,
                 Name = "Toyota",
                 DateCreated = DateTime.Now,
                 DateUpdated = DateTime.Now,

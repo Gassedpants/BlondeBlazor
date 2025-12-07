@@ -4,6 +4,8 @@
 @inject IDbContextFactory<BlondeBlazor.Data.BlondeBlazorContext> DbFactory
 @inject NavigationManager NavigationManager
 
+@attribute [Authorize(Roles = "Administrator")]
+
 <PageTitle>Delete</PageTitle>
 
 <h1>Delete</h1>
@@ -60,12 +62,12 @@
     private Customer? customer;
 
     [SupplyParameterFromQuery]
-    private int ID { get; set; }
+    private int Id { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         using var context = DbFactory.CreateDbContext();
-        customer = await context.Customer.FirstOrDefaultAsync(m => m.ID == ID);
+        customer = await context.Customer.FirstOrDefaultAsync(m => m.Id == Id);
 
         if (customer is null)
         {

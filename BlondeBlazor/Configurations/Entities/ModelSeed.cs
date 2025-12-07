@@ -11,7 +11,7 @@ namespace BlondeBlazor.Configurations.Entities
             builder.HasData(
             new Model
             {
-                ID = 1,
+                Id = 1,
                 Name = "i4",
                 DateCreated = DateTime.Now,
                 DateUpdated = DateTime.Now,
@@ -20,7 +20,7 @@ namespace BlondeBlazor.Configurations.Entities
             },
             new Model
             {
-                ID = 2,
+                Id = 2,
                 Name = "X5",
                 DateCreated = DateTime.Now,
                 DateUpdated = DateTime.Now,
@@ -29,7 +29,7 @@ namespace BlondeBlazor.Configurations.Entities
             },
             new Model
             {
-                ID = 3,
+                Id = 3,
                 Name = "Prius",
                 DateCreated = DateTime.Now,
                 DateUpdated = DateTime.Now,
@@ -38,7 +38,7 @@ namespace BlondeBlazor.Configurations.Entities
             },
             new Model
             {
-                ID = 4,
+                Id = 4,
                 Name = "C-HR",
                 DateCreated = DateTime.Now,
                 DateUpdated = DateTime.Now,

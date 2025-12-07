@@ -21,7 +21,7 @@ else
             <EditForm method="post" Model="Model" OnValidSubmit="UpdateModel" FormName="edit" Enhance>
                 <DataAnnotationsValidator />
                 <ValidationSummary role="alert"/>
-                <input type="hidden" name="Model.ID" value="@Model.ID" />
+                <input type="hidden" name="Model.Id" value="@Model.Id" />
                 <div class="mb-3">
                     <label for="name" class="form-label">Name:</label>
                     <InputText id="name" @bind-Value="Model.Name" class="form-control" />
@@ -59,7 +59,7 @@ else
 
 @code {
     [SupplyParameterFromQuery]
-    private int ID { get; set; }
+    private int Id { get; set; }
 
     [SupplyParameterFromForm]
     private Model? Model { get; set; }
@@ -67,7 +67,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         using var context = DbFactory.CreateDbContext();
-        Model ??= await context.Model.FirstOrDefaultAsync(m => m.ID == ID);
+        Model ??= await context.Model.FirstOrDefaultAsync(m => m.Id == Id);
 
         if (Model is null)
         {
@@ -88,7 +88,7 @@ else
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!ModelExists(Model!.ID))
+            if (!ModelExists(Model!.Id))
             {
                 NavigationManager.NavigateTo("notfound");
             }
@@ -104,6 +104,6 @@ else
     private bool ModelExists(int id)
     {
         using var context = DbFactory.CreateDbContext();
-        return context.Model.Any(e => e.ID == id);
+        return context.Model.Any(e => e.Id == id);
     }
 }

@@ -10,7 +10,7 @@ namespace BlondeBlazor.Configurations.Entities
             builder.HasData(
                 new Colour
                 {
-                  ID = 1,
+                  Id = 1,
                   Name = "Black",
                   DateCreated = DateTime.Now,
                   DateUpdated = DateTime.Now,
@@ -19,7 +19,7 @@ namespace BlondeBlazor.Configurations.Entities
                 },
                 new Colour
                 {
-                    ID = 2,
+                    Id = 2,
                     Name = "Blue",
                     DateCreated = DateTime.Now,
                     DateUpdated = DateTime.Now,

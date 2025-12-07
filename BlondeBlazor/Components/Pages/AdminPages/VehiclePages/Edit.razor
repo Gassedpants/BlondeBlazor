@@ -21,7 +21,7 @@ else
             <EditForm method="post" Model="Vehicle" OnValidSubmit="UpdateVehicle" FormName="edit" Enhance>
                 <DataAnnotationsValidator />
                 <ValidationSummary role="alert"/>
-                <input type="hidden" name="Vehicle.ID" value="@Vehicle.ID" />
+                <input type="hidden" name="Vehicle.Id" value="@Vehicle.Id" />
                 <div class="mb-3">
                     <label for="year" class="form-label">Year:</label>
                     <InputNumber id="year" @bind-Value="Vehicle.Year" class="form-control" />
@@ -34,12 +34,12 @@ else
                 </div>
                 <div class="mb-3">
                     <label for="makeid" class="form-label">MakeId:</label>
-                    <InputText id="makeid" @bind-Value="Vehicle.MakeId" class="form-control" />
+                    <InputNumber id="makeid" @bind-Value="Vehicle.MakeId" class="form-control" />
                     <ValidationMessage For="() => Vehicle.MakeId" class="text-danger" />
                 </div>
                 <div class="mb-3">
                     <label for="modelid" class="form-label">ModelId:</label>
-                    <InputText id="modelid" @bind-Value="Vehicle.ModelId" class="form-control" />
+                    <InputNumber id="modelid" @bind-Value="Vehicle.ModelId" class="form-control" />
                     <ValidationMessage For="() => Vehicle.ModelId" class="text-danger" />
                 </div>
                 <div class="mb-3">
@@ -79,7 +79,7 @@ else
 
 @code {
     [SupplyParameterFromQuery]
-    private int ID { get; set; }
+    private int Id { get; set; }
 
     [SupplyParameterFromForm]
     private Vehicle? Vehicle { get; set; }
@@ -87,7 +87,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         using var context = DbFactory.CreateDbContext();
-        Vehicle ??= await context.Vehicle.FirstOrDefaultAsync(m => m.ID == ID);
+        Vehicle ??= await context.Vehicle.FirstOrDefaultAsync(m => m.Id == Id);
 
         if (Vehicle is null)
         {
@@ -108,7 +108,7 @@ else
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!VehicleExists(Vehicle!.ID))
+            if (!VehicleExists(Vehicle!.Id))
             {
                 NavigationManager.NavigateTo("notfound");
             }
@@ -124,6 +124,6 @@ else
     private bool VehicleExists(int id)
     {
         using var context = DbFactory.CreateDbContext();
-        return context.Vehicle.Any(e => e.ID == id);
+        return context.Vehicle.Any(e => e.Id == id);
     }
 }

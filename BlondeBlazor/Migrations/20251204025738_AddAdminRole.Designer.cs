@@ -4,6 +4,7 @@ using BlondeBlazor.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlondeBlazor.Migrations
 {
     [DbContext(typeof(BlondeBlazorContext))]
-    partial class BlondeBlazorContextModelSnapshot : ModelSnapshot
+    [Migration("20251204025738_AddAdminRole")]
+    partial class AddAdminRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,7 +100,7 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = "3781efa7-66dc-47f0-860f-e506d04102e4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f97387b7-a542-4374-80fd-fe6626c65d77",
+                            ConcurrencyStamp = "bf4daebe-aa80-48d6-8109-eedb0f46d2d6",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             FirstName = "Admin",
@@ -105,9 +108,9 @@ namespace BlondeBlazor.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEP/HSpPdKwYPfpMQ9uVGF2iGanSiuhlnzB1DtQOUCJrIxwaFqagcOtIfp3E4rRVqtw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEI/Icyo1bbrda6InfPcjECVAELDVRULQAvAPx3qgYOBOKHI5aje3c16xBDoifd0rSQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1b78f1a5-255d-45c7-95ff-0e9afc58e1f7",
+                            SecurityStamp = "d17fb120-e6b8-46a8-92e5-712d4afb20f5",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         });
@@ -182,8 +185,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 1,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7360),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7373),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6488),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6501),
                             Name = "Black",
                             UpdatedBy = "System"
                         },
@@ -191,8 +194,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 2,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7376),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7376),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6503),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6504),
                             Name = "Blue",
                             UpdatedBy = "System"
                         });
@@ -267,8 +270,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 1,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7605),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7605),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6729),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6730),
                             Name = "BMW",
                             UpdatedBy = "System"
                         },
@@ -276,8 +279,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 2,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7607),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7607),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6731),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6732),
                             Name = "Toyota",
                             UpdatedBy = "System"
                         });
@@ -315,8 +318,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 1,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7716),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7717),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6835),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6836),
                             Name = "i4",
                             UpdatedBy = "System"
                         },
@@ -324,8 +327,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 2,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7718),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7719),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6837),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6838),
                             Name = "X5",
                             UpdatedBy = "System"
                         },
@@ -333,8 +336,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 3,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7720),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7720),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6839),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6839),
                             Name = "Prius",
                             UpdatedBy = "System"
                         },
@@ -342,8 +345,8 @@ namespace BlondeBlazor.Migrations
                         {
                             Id = 4,
                             CreatedBy = "System",
-                            DateCreated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7721),
-                            DateUpdated = new DateTime(2025, 12, 7, 21, 2, 50, 650, DateTimeKind.Local).AddTicks(7722),
+                            DateCreated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6840),
+                            DateUpdated = new DateTime(2025, 12, 4, 10, 57, 37, 740, DateTimeKind.Local).AddTicks(6841),
                             Name = "C-HR",
                             UpdatedBy = "System"
                         });
@@ -372,11 +375,11 @@ namespace BlondeBlazor.Migrations
                     b.Property<string>("LicensePlateNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MakeId")
-                        .HasColumnType("int");
+                    b.Property<string>("MakeId")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ModelId")
-                        .HasColumnType("int");
+                    b.Property<string>("ModelId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");

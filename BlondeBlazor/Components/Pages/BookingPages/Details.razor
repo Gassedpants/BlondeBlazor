@@ -35,7 +35,7 @@
             <dd class="col-sm-10">@booking.UpdatedBy</dd>
         </dl>
         <div>
-            <a href="@($"/bookings/edit?id={booking.ID}")">Edit</a> |
+            <a href="@($"/bookings/edit?id={booking.Id}")">Edit</a> |
             <a href="@($"/bookings")">Back to List</a>
         </div>
     }
@@ -45,12 +45,12 @@
     private Booking? booking;
 
     [SupplyParameterFromQuery]
-    private int ID { get; set; }
+    private int Id { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         using var context = DbFactory.CreateDbContext();
-        booking = await context.Booking.FirstOrDefaultAsync(m => m.ID == ID);
+        booking = await context.Booking.FirstOrDefaultAsync(m => m.Id == Id);
 
         if (booking is null)
         {

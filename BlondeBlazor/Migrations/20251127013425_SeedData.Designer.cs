@@ -27,11 +27,11 @@ namespace BlondeBlazor.Migrations
 
             modelBuilder.Entity("BlondeBlazor.Domain.Booking", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -57,18 +57,18 @@ namespace BlondeBlazor.Migrations
                     b.Property<int>("VehicleId")
                         .HasColumnType("int");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Booking");
                 });
 
             modelBuilder.Entity("BlondeBlazor.Domain.Colour", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -85,14 +85,14 @@ namespace BlondeBlazor.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Colour");
 
                     b.HasData(
                         new
                         {
-                            ID = 1,
+                            Id = 1,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5690),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5703),
@@ -101,7 +101,7 @@ namespace BlondeBlazor.Migrations
                         },
                         new
                         {
-                            ID = 2,
+                            Id = 2,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5706),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5707),
@@ -112,11 +112,11 @@ namespace BlondeBlazor.Migrations
 
             modelBuilder.Entity("BlondeBlazor.Domain.Customer", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -142,18 +142,18 @@ namespace BlondeBlazor.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("BlondeBlazor.Domain.Make", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -170,14 +170,14 @@ namespace BlondeBlazor.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Make");
 
                     b.HasData(
                         new
                         {
-                            ID = 1,
+                            Id = 1,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5944),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5944),
@@ -186,7 +186,7 @@ namespace BlondeBlazor.Migrations
                         },
                         new
                         {
-                            ID = 2,
+                            Id = 2,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5946),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(5946),
@@ -197,11 +197,11 @@ namespace BlondeBlazor.Migrations
 
             modelBuilder.Entity("BlondeBlazor.Domain.Model", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -218,14 +218,14 @@ namespace BlondeBlazor.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Model");
 
                     b.HasData(
                         new
                         {
-                            ID = 1,
+                            Id = 1,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6031),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6032),
@@ -234,7 +234,7 @@ namespace BlondeBlazor.Migrations
                         },
                         new
                         {
-                            ID = 2,
+                            Id = 2,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6033),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6033),
@@ -243,7 +243,7 @@ namespace BlondeBlazor.Migrations
                         },
                         new
                         {
-                            ID = 3,
+                            Id = 3,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6035),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6035),
@@ -252,7 +252,7 @@ namespace BlondeBlazor.Migrations
                         },
                         new
                         {
-                            ID = 4,
+                            Id = 4,
                             CreatedBy = "System",
                             DateCreated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6036),
                             DateUpdated = new DateTime(2025, 11, 27, 9, 34, 24, 467, DateTimeKind.Local).AddTicks(6037),
@@ -263,11 +263,11 @@ namespace BlondeBlazor.Migrations
 
             modelBuilder.Entity("BlondeBlazor.Domain.Vehicle", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("ColourId")
                         .HasColumnType("int");
@@ -296,7 +296,7 @@ namespace BlondeBlazor.Migrations
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Vehicle");
                 });
